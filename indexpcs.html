@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PCs - Ventas</title>
+  <link rel="stylesheet" href="../CSS/stylepcs.css" />
+  <!-- Bootstrap para mejor presentación de tarjetas -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  padding-top: 180px; /* espacio para header fijo */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, rgb(101, 246, 255) 25%, white 25%);
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  height: 199px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  gap: 30px;
+}
+
+.icono-menu {
+  width: 70px;
+  height: 70px;
+}
+
+.titulo-header {
+  font-size: 25px;
+  font-weight: 520px;
+  color: black;
+}
+
+/* BARRA DE BÚSQUEDA */
+.barra-busqueda{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 11;
+  position: absolute;
+}
+
+.barra-busqueda input {
+  width: 1020px;
+  height: 55px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.triangulo{
+     position: relative;
+     left: 1525px;
+     bottom:50px;
+}
+footer{
+    background-color:black;
+    padding:10px 0;
+    text-align: center;
+    color:white;
+}
+.ap{
+    position: relative;
+    border-radius: 470px;
+    padding: 10%;
+    width: 75%;
+    height: 75%;
+    left: 200px;
+    z-index: 0;
+}
+/* Tarjetas de PCs */
+.card-img-top {
+  height: 220px;
+  object-fit: contain;
+  background: #222;
+}
+
+.card {
+  border-radius: 18px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1.1rem;
+}
+
+.badge {
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 14px;
+}
+
+</style>
+<body>
+  <!-- HEADER pegado que ya tienes -->
+    <header>
+    <img src="../Assets/abc.png" alt="Icono menú" class="icono-menu">
+    <p class="titulo-header">Categorías</p>
+    <img src="../Assets/triamguloceleste.png" class="triangulo">
+    <div class="barra-busqueda">
+      <input type="text" placeholder="Buscar PCs...">
+    </div>
+    </header>
+
+  <main class="container" style="margin-top:40px;">
+    <section class="mt-5">
+      <h1 class="text-info mb-4" style="font-size:2rem;">PCs en venta</h1>
+      <div class="row g-4 justify-content-center">
+        <!-- Tarjeta PC 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc1.png" class="card-img-top" alt="PC Gamer">
+            <div class="card-body">
+              <h5 class="card-title text-info">Gamer RTX Pro</h5>
+              <p class="card-text">Intel i7, 32GB RAM, RTX 4070, 1TB SSD, 2TB HDD</p>
+              <span class="badge bg-success mb-2">En stock</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$1,399.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $1,599.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta PC 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc2.png" class="card-img-top" alt="PC Oficina">
+            <div class="card-body">
+              <h5 class="card-title text-info">Oficina Plus</h5>
+              <p class="card-text">Intel i5, 16GB RAM, 512GB SSD, Windows 11 Pro</p>
+              <span class="badge bg-success mb-2">En stock</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$899.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $999.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta PC 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc3.png" class="card-img-top" alt="PC Compacta">
+            <div class="card-body">
+              <h5 class="card-title text-info">Mini PC Compact</h5>
+              <p class="card-text">Ryzen 5, 8GB RAM, 256GB SSD, WiFi 6, Ultra Compacta</p>
+              <span class="badge bg-success mb-2">En stock</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$550.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $630.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta PC 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc4.png" class="card-img-top" alt="PC All in One">
+            <div class="card-body">
+              <h5 class="card-title text-info">All in One 24"</h5>
+              <p class="card-text">Intel i5, 8GB RAM, 512GB SSD, Pantalla 24" FHD</p>
+              <span class="badge bg-warning mb-2">Últimas piezas</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$980.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $1,150.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta PC 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc5.png" class="card-img-top" alt="PC Estudiante">
+            <div class="card-body">
+              <h5 class="card-title text-info">PC Estudiante</h5>
+              <p class="card-text">Pentium Gold, 4GB RAM, 128GB SSD, Windows 11 Home</p>
+              <span class="badge bg-success mb-2">En stock</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$410.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $480.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta PC 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow-lg border-info">
+            <img src="../Assets/pc6.png" class="card-img-top" alt="Workstation Pro">
+            <div class="card-body">
+              <h5 class="card-title text-info">Workstation Pro</h5>
+              <p class="card-text">Xeon, 64GB RAM, Quadro RTX, SSD 2TB, Edición profesional</p>
+              <span class="badge bg-success mb-2">En stock</span>
+              <p class="mb-0">Precio: <span class="fw-bold text-info">$2,700.00</span></p>
+              <p class="text-decoration-line-through text-secondary">Antes: $3,250.00</p>
+              <a href="#" class="btn btn-info w-100 mt-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de comentarios con Bootstrap -->
+    <section class="my-5">
+      <h2 class="text-info mb-4">Comentarios de usuarios</h2>
+      <div id="comentarios-lista-pcs">
+          <!-- Aquí se mostrarán los comentarios con Bootstrap cards -->
+      </div>
+    </section>
+
+    <!-- Formulario de comentarios con Bootstrap -->
+    <section class="mb-5">
+      <h2 class="text-info mb-3">Deja tu comentario</h2>
+      <form id="form-comentario-pcs" class="bg-dark p-4 rounded-3 shadow-lg">
+          <div class="mb-3">
+              <label for="nombrePC" class="form-label text-white">Nombre:</label>
+              <input type="text" id="nombrePC" name="nombrePC" class="form-control" required>
+          </div>
+          <div class="mb-3">
+              <label for="comentarioPC" class="form-label text-white">Comentario:</label>
+              <textarea id="comentarioPC" name="comentarioPC" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-info">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de comentarios usando Bootstrap cards -->
+  <script>
+    function mostrarComentariosPCs() {
+        const comentariosDiv = document.getElementById('comentarios-lista-pcs');
+        comentariosDiv.innerHTML = "";
+        const comentarios = JSON.parse(localStorage.getItem('comentarios_pcs') || "[]");
+        comentarios.forEach(c => {
+            const card = document.createElement('div');
+            card.className = "card bg-secondary text-white mb-3";
+            card.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title text-info">${c.nombre}</h5>
+                    <p class="card-text">${c.comentario}</p>
+                </div>
+            `;
+            comentariosDiv.appendChild(card);
+        });
+    }
+    mostrarComentariosPCs();
+
+    document.getElementById('form-comentario-pcs').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombrePC').value;
+        const comentario = document.getElementById('comentarioPC').value;
+        if(nombre && comentario){
+            const comentarios = JSON.parse(localStorage.getItem('comentarios_pcs') || "[]");
+            comentarios.push({nombre, comentario});
+            localStorage.setItem('comentarios_pcs', JSON.stringify(comentarios));
+            mostrarComentariosPCs();
+            document.getElementById('form-comentario-pcs').reset();
+        }
+    });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Busca todos los botones y enlaces con texto "Comprar"
+    document.querySelectorAll('button, a').forEach(function(btn) {
+      if (btn.textContent.trim().toLowerCase() === "comprar") {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Bootstrap Toast
+          let toast = document.getElementById('toast-compra-pcs');
+          if(!toast){
+            toast = document.createElement('div');
+            toast.id = 'toast-compra-pcs';
+            toast.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-4';
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
+            toast.setAttribute('aria-atomic', 'true');
+            toast.innerHTML = `<div class="d-flex">
+              <div class="toast-body">
+                <strong>¡Se ha agregado al carrito!</strong>
+              </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>`;
+            document.body.appendChild(toast);
+          }
+          const toastBootstrap = new bootstrap.Toast(toast, { delay: 2500 });
+          toastBootstrap.show();
+        });
+      }
+    });
+  });
+</script>
+<section class="container my-5">
+  <h2 class="text-info mb-4">Preguntas frecuentes</h2>
+  <div class="accordion" id="faqPCs">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqPC1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePC1" aria-expanded="true" aria-controls="collapsePC1">
+          ¿Las PCs vienen con sistema operativo instalado?
+        </button>
+      </h2>
+      <div id="collapsePC1" class="accordion-collapse collapse show" aria-labelledby="faqPC1" data-bs-parent="#faqPCs">
+        <div class="accordion-body">
+          Sí, todas nuestras PCs vienen con Windows 11 instalado y activado.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqPC2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePC2" aria-expanded="false" aria-controls="collapsePC2">
+          ¿Tienen garantía?
+        </button>
+      </h2>
+      <div id="collapsePC2" class="accordion-collapse collapse" aria-labelledby="faqPC2" data-bs-parent="#faqPCs">
+        <div class="accordion-body">
+          Sí, ofrecemos 1 año de garantía para todos los equipos.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqPC3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePC3" aria-expanded="false" aria-controls="collapsePC3">
+          ¿Realizan envíos a provincias?
+        </button>
+      </h2>
+      <div id="collapsePC3" class="accordion-collapse collapse" aria-labelledby="faqPC3" data-bs-parent="#faqPCs">
+        <div class="accordion-body">
+          Sí, enviamos a todo el país con embalaje seguro.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <article>
+            <a href="index1.html">
+                <h1 style="
+                    padding: 67px;
+                    font-size:25px;
+                    color: rgb(101, 246, 255);
+                    background-color: rgb(27, 27, 27);
+                    left: 85px;
+                    font-family: Arial;">Regresar</h1>
+            </a>
+        </article>
+
+  <footer class="text-center py-4" style="background:black; color:white;">
+    (c) Todos los derechos reservados
+  </footer>
+</body>
+</html>

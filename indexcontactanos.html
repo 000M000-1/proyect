@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Los mejores productos de tecnologia del país</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  padding-top: 140px; /* espacio para header fijo */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, rgb(101, 246, 255) 25%, white 25%);
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  height: 199px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  gap: 30px;
+}
+
+.icono-menu {
+  width: 70px;
+  height: 70px;
+}
+
+.titulo-header {
+  font-size: 25px;
+  font-weight: 520px;
+  color: black;
+}
+
+/* BARRA DE BÚSQUEDA */
+.barra-busqueda{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 11;
+  position: absolute;
+}
+
+.barra-busqueda input {
+  width: 1020px;
+  height: 55px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.triangulo{
+     position: relative;
+     left: 1525px;
+     bottom:50px;
+}
+footer{
+    background-color:black;
+    padding:10px 0;
+    text-align: center;
+    color:white;
+}
+.ap{
+    position: relative;
+    border-radius: 20%;
+    padding: 4%;
+    width: 45%;
+    height: 45%;
+    left: 25%;
+    z-index: 0;
+}
+.cinco{
+    padding: 17px;
+    font-size:25px;
+    color: white;
+    left: 85px;
+    font-family:"Kanit", serif;
+}
+</style>
+</head> 
+<body>
+    <header>
+        <img src="../Assets/abc.png" alt="Icono menú" class="icono-menu">
+        <p class="titulo-header">Categorías</p>
+        <img src="../Assets/triamguloceleste.png" class="triangulo">
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar productos...">
+        </div>
+    </header>
+    <main class="main">
+        <article>
+            <img src="../Assets/c.png" class="ap">
+        </article>
+        <h1 class="cinco">Si en caso tuviera algun problema, llamenos</h1>
+        
+        <!-- Sección de Preguntas Frecuentes -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4" style="color:#65f6ff;">Preguntas Frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cómo puedo comprar un producto?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Puedes comprar un producto seleccionándolo y siguiendo el proceso de pago en nuestra tienda en línea.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Cuáles son los métodos de pago disponibles?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Aceptamos tarjetas de crédito, débito y pagos por transferencia bancaria.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Hacen envíos a todo el país?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, realizamos envíos a todas las provincias del país.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Puedo devolver un producto si no estoy satisfecho?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, puedes solicitar la devolución dentro de los primeros 7 días luego de recibir tu producto.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container my-5">
+            <h2 class="text-center mb-4" style="color:#65f6ff;">Comentarios</h2>
+            <form class="mb-4" id="commentForm">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label" style="color:#65f6ff;">Nombre</label>
+                    <input type="text" class="form-control bg-dark text-light" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label" style="color:#65f6ff;">Comentario</label>
+                    <textarea class="form-control bg-dark text-light" id="comentario" name="comentario" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Enviar</button>
+            </form>
+            <div id="commentsList">
+                <!-- Comentarios aparecerán aquí -->
+            </div>
+        </section>
+    </main>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script básico para mostrar comentarios en la página (no persiste datos) -->
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const comentario = document.getElementById('comentario').value;
+            const commentsList = document.getElementById('commentsList');
+            // Crear el bloque del comentario
+            const commentDiv = document.createElement('div');
+            commentDiv.classList.add('mb-3', 'p-3', 'rounded', 'bg-dark', 'text-light', 'border');
+            commentDiv.innerHTML = `<strong style="color:#65f6ff;">${nombre}</strong><p>${comentario}</p>`;
+            commentsList.prepend(commentDiv);
+            // Limpiar el formulario
+            document.getElementById('commentForm').reset();
+        });
+    </script>
+    <article>
+            <a href="index1.html">
+                <h1 style="
+                    padding: 67px;
+                    font-size:25px;
+                    color: rgb(101, 246, 255);
+                    background-color: rgb(27, 27, 27);
+                    left: 85px;
+                    font-family: Arial;">Regresar</h1>
+            </a>
+        </article>
+    </main>
+    <footer>
+        (c) Todos los derechos reservados
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

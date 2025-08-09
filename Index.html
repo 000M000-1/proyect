@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Los mejores productos de tecnologia del país</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head> 
+<body>
+
+    <header>
+        <nav>
+            <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar productos...">
+            </div>
+            <p class="categorias">Categorias</p>
+            <a class="ofertas" href="indexofertas.html">Ofertas</a>
+            <a class="nav" href="indexpcs.html">Pcs</a>
+            <a class="nav" href="Indexlaptops.html">Laptops</a>
+            <a class="nav" href="procesadores.html">Procesadores</a>
+            <a class="nav" href="#r">Reciente</a>
+            <a class="nav" href="indexcontactanos.html">Contactanos</a>
+            <img src="../Assets/123.png" class="a">
+            <img src="../Assets/triamguloceleste.png" class="triangulo">
+            <img src="../Assets/abc.png" class="abc">
+        </nav>
+    </header>
+    <main class="main">
+            <section class="sections"> <video width="1000" height="695"
+src="../Assets/video.mp4" loop autoplay muted repeat></video> </section>
+
+          <h1 class="tres" class="#r">Lo más reciente:</h1>
+        <article>
+            <p>
+            <img src="../Assets/primero1.png" class="dos">
+            <img src="../Assets/segundo.png" class="dos">
+            <img src="../Assets/tercero.png" class="dos">
+            <img src="../Assets/cuarto.png" class="dos">
+            <img src="../Assets/cuarto1.png" class="dos"> 
+            <img src="../Assets/quinto.png" class="dos">
+            <img src="../Assets/sexto.png" class="dos">
+            <img src="../Assets/septimo.png" class="dos">
+            <img src="../Assets/octavo.png" class="dos">
+            </p>
+         </article>
+         
+         <h1 class="tres" >Mas productos:</h1>
+         
+         <div class="carrusel-ofertas">
+  <button class="carrusel-btn carrusel-prev">&#10094;</button>
+  <div class="carrusel-imagenes">
+    <img src="../Assets/imagen1.png" alt="Oferta 1" class="carrusel-img activa">
+    <img src="../Assets/imagen2.png" alt="Oferta 2" class="carrusel-img">
+    <img src="../Assets/imagen3.png" alt="Oferta 3" class="carrusel-img">
+  </div>
+  <button class="carrusel-btn carrusel-next">&#10095;</button>
+</div>
+
+<script>
+  const carruselImgs = document.querySelectorAll('.carrusel-img');
+  const prevBtn = document.querySelector('.carrusel-prev');
+  const nextBtn = document.querySelector('.carrusel-next');
+  let idx = 0;
+
+  function mostrarImagen(index) {
+    carruselImgs.forEach((img, i) => {
+      img.classList.toggle('activa', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    idx = (idx - 1 + carruselImgs.length) % carruselImgs.length;
+    mostrarImagen(idx);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    idx = (idx + 1) % carruselImgs.length;
+    mostrarImagen(idx);
+  });
+
+  setInterval(() => {
+    idx = (idx + 1) % carruselImgs.length;
+    mostrarImagen(idx);
+  }, 4000);
+
+  mostrarImagen(idx);
+</script>
+         <article>
+            <img src="../Assets/a1.png" class="ap">
+            <a href="index1.html">
+                <img src="../Assets/abc.png" class="ab">
+            </a>
+         </article>
+
+        <!-- Sección de comentarios -->
+        <section class="comentarios-section">
+            <h2>Comentarios de usuarios</h2>
+            <div id="comentarios-lista">
+                <!-- Aquí se mostrarán los comentarios -->
+            </div>
+        </section>
+
+        <!-- Formulario de comentarios -->
+        <section class="formulario-section">
+            <h2>Deja tu comentario</h2>
+            <form id="form-comentario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <script>
+        // Mostrar comentarios (localStorage)
+        function mostrarComentarios() {
+            const comentariosDiv = document.getElementById('comentarios-lista');
+            comentariosDiv.innerHTML = "";
+            const comentarios = JSON.parse(localStorage.getItem('comentarios') || "[]");
+            comentarios.forEach(c => {
+                const elemento = document.createElement('div');
+                elemento.className = "comentario";
+                elemento.innerHTML = `<strong>${c.nombre}</strong>: <span>${c.comentario}</span>`;
+                comentariosDiv.appendChild(elemento);
+            });
+        }
+        mostrarComentarios();
+
+        // Formulario
+        document.getElementById('form-comentario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const comentario = document.getElementById('comentario').value;
+            if(nombre && comentario){
+                const comentarios = JSON.parse(localStorage.getItem('comentarios') || "[]");
+                comentarios.push({nombre, comentario});
+                localStorage.setItem('comentarios', JSON.stringify(comentarios));
+                mostrarComentarios();
+                // Limpiar formulario
+                document.getElementById('form-comentario').reset();
+            }
+        });
+        </script>
+        
+    </main>
+    <footer>
+        (c) Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
