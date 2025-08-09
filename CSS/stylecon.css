@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  padding-top: 140px; /* espacio para header fijo */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, rgb(101, 246, 255) 25%, white 25%);
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  height: 199px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  gap: 30px;
+}
+
+.icono-menu {
+  width: 70px;
+  height: 70px;
+}
+
+.titulo-header {
+  font-size: 25px;
+  font-weight: 520px;
+  color: black;
+}
+
+/* BARRA DE BÚSQUEDA */
+.barra-busqueda{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 11;
+  position: absolute;
+}
+
+.barra-busqueda input {
+  width: 1020px;
+  height: 55px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.triangulo{
+     position: relative;
+     left: 1525px;
+     bottom:50px;
+}
+footer{
+    background-color:black;
+    padding:10px 0;
+    text-align: center;
+    color:white;
+}
+.ap{
+    position: relative;
+    border-radius: 470px;
+    padding: 10%;
+    width: 75%;
+    height: 75%;
+    left: 200px;
+    z-index: 0;
+}
+.cinco{
+    padding: 67px;
+    font-size:25px;
+    color: white;
+    left: 85px;
+    font-family: Arial;
+}

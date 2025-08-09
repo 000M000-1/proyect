@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  padding-top: 270px; /* espacio para header fijo */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, rgb(101, 246, 255) 25%, white 25%);
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  height: 199px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  gap: 30px;
+}
+
+.icono-menu {
+  width: 70px;
+  height: 70px;
+}
+
+.titulo-header {
+  font-size: 25px;
+  font-weight: 520px;
+  color: black;
+}
+
+/* BARRA DE BÚSQUEDA */
+.barra-busqueda{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 11;
+  position: absolute;
+}
+
+.barra-busqueda input {
+  width: 1020px;
+  height: 55px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.triangulo{
+     position: relative;
+     left: 1525px;
+     bottom:50px;
+}
+
+/* BARRA DE BÚSQUEDA */
+.barra-busqueda {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.barra-busqueda input {
+  width: 1000px;
+  max-width: 90%;
+  height: 50px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenedor-principal {
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+/* TÍTULOS DE SECCIONES */
+.seccion-titulo {
+  font-size: 24px;
+  padding: 61px 20px 12px;
+  text-align: left;
+  font-weight: 50px;
+}
+
+/* COMPONENTES */
+.contenedor-componentes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 57px;
+  justify-content: center;
+  padding: 47px;
+}
+
+.componente {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  width: 397px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+.componente:hover {
+  transform: scale(1.05);
+}
+
+.componente img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.componente h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.componente p {
+  font-size: 15px;
+  font-weight: 400;
+}
+footer{
+    background-color:black;
+    padding:10px 0;
+    text-align: center;
+    color:white;
+}
